@@ -12,7 +12,7 @@ cooking_time = int(input())
 # 종료되는 시각 계산
 end_hour = (current_hour + (current_minute * 60 + current_second + cooking_time) // 60) % 24
 end_minute = (current_minute + cooking_time) % 60
-
+            
 
 # 결과 출력
 print(f'{end_hour} {end_minute}')
