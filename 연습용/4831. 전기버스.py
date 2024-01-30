@@ -1,7 +1,7 @@
 T = int(input())
 
-for test_case in range(1, T+1):
-    K, N, M = list(map(int, input().split()))  
+for test_case in range(1, T + 1):
+    K, N, M = map(int, input().split()) 
     # K: 충전당 이동거리, N: 종점까지 총 정류장 수, M: 충전기 설치 된 정류장
     charger = list(map(int, input().split()))   # 충전기 설치 정류장 번호
     
