@@ -28,7 +28,8 @@ N = int(input())     # N : 수의 개수, N을 입력한다.
 
 # 입력한 N개의 수를 num_list에 입력한다.
 # for _ in range(N)을 사용해서 N번 만큼 수를 입력할 수 있게 만들었다.
-num_list = [int(input()) for _ in range(N)]
+num_list = list(int(input()) for _ in range(N))
+
 
 # 범위 range(N)까지를 반복하며 i를 찾는다.
 for i in range(N):
