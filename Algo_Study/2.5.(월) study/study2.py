@@ -29,6 +29,32 @@
 
 출력값 : 15
 '''
+# 떡 개수랑 길이 입력
+N, M = list(map(int, input().split()))
 
+# 떡의 높이 입력
+arr = list(map(int, input().split()))
+
+# 이진 탐색 시작과 끝 정하기
+start = 0
+end = 99999
+
+# 이진탐색하기
+result = 0  # 떡 길이 변수 할당
+while(start <= end):    # while문으로 반복 시작 스타트가 end보다 작거나 같을 경우동안 
+    total = 0       # 떡 가운데를 잘랐을 때 얻는 떡의 양 변수
+    mid = (start + end) // 2    # mid는 시작+끝 나누기 2한 값 설정
+    for i in arr: # arr에 떡의 높이를 반복하며 찾기
+        if i > mid:     # 떡의 높이가 중간보다 크다면
+            total += i - mid    # 중간으로 잘랐을 때 값을 더하기
+# 잘린 떡이 M보다 작으면 왼쪽을 탐색
+    if total < M: 
+        end = mid - 1
+# 잘린 떡이 M보다 크거나 같으면 오른쪽 탐색
+    else:
+        result = mid # 최대한 덜 잘랐을 때를 result에 할당
+        start = mid + 1  # 오른쪽 탐색을 위해 시작값을 오른쪽으로 이동
+
+print(result)
 
 
