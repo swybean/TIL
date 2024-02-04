@@ -18,8 +18,8 @@ for test_case in range(1, T+1):
             cnt = arr[i][j]     # 터트린 풍선의 꽃가루 수
             # 주변 풍선의 꽃가루 
             for k in range(4):  # 주변 풍선의 인덱스는 ni, nj
-                ni = i+di[k]
-                nj = j+dj[k]
+                ni = i + di[k]
+                nj = j + dj[k]
                 if 0 <= ni < N and 0 <= nj < M:
                     cnt += arr[ni][nj]
             # 꽃가루를 최대값과 비교
