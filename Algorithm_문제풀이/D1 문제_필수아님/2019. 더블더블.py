@@ -4,12 +4,17 @@
 주어질 숫자는 30을 넘지 않는다.
 '''
 
-import sys
-sys.stdin = open('input.txt', 'r')
 
 N = int(input())
      
 num = 1
+num_list = []
+
+for i in range(1, N+1):
+    if i * 2 > num:
+        num_list + [i]
+    print(num_list)
+
 
 
 
