@@ -20,7 +20,7 @@ for tc in range(1, T+1):
 
             if cnt < 0:     # 음수면 보너스 점수 0점처리
                 cnt = 0
-            if cnt >= 0:    # 양수이면 보너스 점수
+            if cnt > 0:    # 양수이면 보너스 점수
                 if cnt % 2 == 0:    # 만약 짝수라면 보너스 점수 2배
                     cnt = cnt * 2
             if cnt > max_v:     # 총 보너스 점수보다 현재 보너스 점수가 크면 바꾸기
