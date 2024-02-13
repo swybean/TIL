@@ -13,6 +13,9 @@ N x M 크기의 얼음 틀이 있다. 구멍이 뚫려 있는 부분은 0, 칸�
 • 한 번에 만들 수 있는 아이스크림의 개수를 출력한다
 '''
 
+# 구현, 탐색 문제는 범위 지정 필수
+# 인덱스 에러 자주 남.
+
 # 함수 제작
 def dfs(x, y):
     #######################물어볼 것!###########################
@@ -20,6 +23,10 @@ def dfs(x, y):
     # 이거 넣고 나니 답이 나오는데 왜 필요한지 왜 없으면 오류난건지 잘 모르겠음.
     if x < 0 or x >= N or y < 0 or y >= M:
         return False
+    # x, y가 0이상 N-1이하 값으로만 나와야 된다.
+    # 그래서 이 조건을 넣어야지 인덱스 범위 오류가 안난다.
+    # 이 외의 값은 탐색하지 않겠다 하는 조건문임.
+
     if arr[x][y] == 2 or arr[x][y] == 1:
         return False
     
@@ -31,7 +38,9 @@ def dfs(x, y):
     dfs(x+1, y)
     dfs(x, y-1)
     dfs(x-1, y)
-    
+    # 위 dfs가 인덱스 범위를 만족하면 실행한다는 if 조건문을 하나하나 달아주거나
+    # 아니면 맨위 범위지정을 해줘야 한다.
+
     return True
     
 
@@ -43,7 +52,7 @@ arr = []
 for i in range(N):
     arr.append(list(map(int, input())))
 
-# 얼음ㅁ 숫자 세기
+# 얼음 숫자 세기
 ice = 0
 for i in range(N):
     for j in range(M):
@@ -51,5 +60,8 @@ for i in range(N):
             ice += 1
 
 print(ice)
+
+
+
 
 

@@ -1,19 +1,18 @@
 
-
-
 T = int(input())
 for test_case in range(1, T+1):
     N, M = map(int, input().split())
     arr = list(map(int, input().split()))
 
     maximum = 0
-    minimum = 9999999
+    minimum = 99999999
 
-    for i in range(M):
+    for i in range(N - M + 1):  
         if arr[i] + arr[i+1] + arr[i+2] > maximum:
-            maximum = i
+            maximum = arr[i] + arr[i+1] + arr[i+2]
+
         if arr[i] + arr[i+1] + arr[i+2] < minimum:
-            minimum = i
+            minimum = arr[i] + arr[i+1] + arr[i+2]
         result = maximum - minimum
     
     print(f'#{test_case} {result}')

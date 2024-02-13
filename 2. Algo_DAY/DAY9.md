@@ -1,4 +1,4 @@
-# **알고리즘_9일차** (2/13)
+# **알고리즘_9~10일차** (2/13~2/14)
  
 ---
 
@@ -302,10 +302,13 @@ def construct_candidates(a, k, input, c):
 ---
 ### **6-1. 분할정복 예제**
 
-#### **거듭제곱 (Exponetiation) : $O(n)$**  
+#### **1. 거듭제곱 (Exponetiation) : $O(n)$**  
 
 > $C^2$ = C x C  
-> $C^3$ = C x C x C
+> $C^3$ = C x C x C  
+...  
+$C^n$ = C x C x ... x C
+
 
 ```python
 def power(base, exponent):
@@ -317,16 +320,76 @@ def power(base, exponent):
     return result
 ```
 
----
+
 
 #### **분할정복 기반의 알고리즘 : $O(log_2n)$**
 
-> $C^8$ = C x C x C x C x C x C x C x C  
-> $C^8$ = $C^4$ x  $C^4$ =  $((C^2)^2)^2$
-> $C^n$ = 
+![분할정복1](./img/분할정복1.png)
+![분할정복2](./img/분할정복2.png)
+
+```python
+def power(base, exponent):
+    if exponent == 0 or base == 0:
+        return 1
+    if exponent % 2 == 0:
+        newbase = power(base, exponent / 2)
+        return newbase * newbase
+    else:
+        newbase = power(base, (exponent-1)/2)
+        return (newbase * newbase) * base
+```
+
+---
 
 
+#### **2. 퀵 정렬**
+> 시간 복잡도 : O($n^2$)  
+> 합병정렬에 비해 좋지 못하다.  
+> 평균 복잡도는 $nlogn$이기 때문에 퀵(빠른)정렬이라고 한다.   
+(평균적으로 가장 빠르다.)  
+> 주어진 배열을 2개로 분할하고, 각각을 정렬한다.  
 
+> **합볍정렬과 다른점**  
+> 합병정렬은 그냥 두 부분으로 나누는 반면에,  
+퀵 정렬은 분할할 때 기준 아이템(pivot item) 중심으로, 이보다 작은 것은 왼쪽, 큰 것은 오른편에 위치시킨다.  
+>
+> 각 부분 정렬이 끝난 후, 합병정렬은 "합병"이란 후처리 작업이 필요하나, 퀵 정렬은 필요하지 않음
 
+#### **퀵 정렬 알고리즘**
+```python
+def quicksort(a, start, end):
+    if start < end:
+        p = partition(a, start, end)
+        quicksort(a, start, p-1)
+        quicksort(a, p+1, end)
 
+def partition(a, start, end):
+    pivot = (start + end) // 2
+    L = start
+    R = end
+    while L < R:
+        while(L < R and a[L] < a[pivot]):
+            L += 1
+        while(L < R and a[R] >= a[pivot]):
+            R -= 1
+        if L < R:
+            if L == pivot:
+                pivot = R
+            a[L], a[R] = a[R], a[L]
+    a[pivot], a[R] = a[R], a[pivot]
+    return R
+```
 
+#### **퀵 정렬 수행 과정**
+> 교재 p.78 ~ p.86
+
+![퀵0](./img/퀵0.png)
+![퀵1](./img/퀵1.png)
+![퀵2](./img/퀵2.png)
+![퀵3](./img/퀵3.png)
+![퀵4](./img/퀵4.png)
+![퀵5](./img/퀵5.png)
+![퀵6](./img/퀵6.png)
+![퀵7](./img/퀵7.png)
+![퀵8](./img/퀵8.png)
+![퀵9](./img/퀵9.png)
