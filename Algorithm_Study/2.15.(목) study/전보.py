@@ -56,9 +56,6 @@ def dij(C):
         dist, now = heapq.heappop(q)    # 최단시간 정보 꺼내기
         if timetable[now] < dist:       # 만약 현재 도시가 이미 처리된 도시면
             continue                    # 무시해라
-        ##############
-        # dist도 교재에서 알려준대로 그냥 쓰긴하는데 왜 dist인지 변수명의 의미가 뭔지
-        # 무엇을 뜻하는건지 모르겠음
     
         
         # 현재 도시와 연결된 다른 인접도시 반복순회

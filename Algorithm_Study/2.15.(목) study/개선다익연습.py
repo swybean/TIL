@@ -5,7 +5,7 @@
 import heapq
 
 # 무한을 의미하는 10억 설정
-INF = int(1e9)  \
+INF = int(1e9)  
 
 # 노드의 개수n, 간선의 개수m 입력받기
 n, m = map(int, input().split())
@@ -33,11 +33,11 @@ def dij(start):
     heapq.heappush(q, (0, start))   # 큐에 삽입
     distance[start] = 0             # 시작노드로 가기 위한 최단 경로는 0으로 설정
 
-    while q:    # 큐가 비어있지 않으면 (위에서 시작노드를 삽입했으니 안비어있다)
-        # 가장 최단 거리가 짧은 노드에 대한 정보 꺼내기 (시작 노드를 꺼내 온다.)
+    while q:    # 큐가 비어있지 않으면 
+        # 가장 최단 거리가 짧은 노드에 대한 정보 꺼내기
         dist, now = heapq.heappop(q)
         # 현재 노드가 이미 처리된 적 있는 노드면 무시
-        # dist는 무엇을 의미하는 걸까..?
+        # dist는 무엇을 의미하는 걸까..? -> (거리, 노드)로 저장된것에서 거리를 의미하는 변수명
         if distance[now] < dist:
             continue
         # 현재 노드와 연결된 다른 인접한 노드들을 확인
