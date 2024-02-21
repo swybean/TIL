@@ -4,7 +4,7 @@ def inorder_traverse(i):
     if i <= N:
         inorder_traverse(i * 2)
         tree[i] = number
-        nunber += 1
+        number += 1
         inorder_traverse(i * 2 + 1)
 
 

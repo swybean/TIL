@@ -1,4 +1,5 @@
 def inorder_traverse(T):
+    global yb
     if T:
         inorder_traverse(left[T])
         print(tree[T], end='')
@@ -7,7 +8,7 @@ def inorder_traverse(T):
  
 for test_case in range(1, 11):
     n = int(input())
- 
+    yb = 0
     left = [0] * (n + 1)
     right = [0] * (n + 1)
     tree = [0] * (n + 1)
