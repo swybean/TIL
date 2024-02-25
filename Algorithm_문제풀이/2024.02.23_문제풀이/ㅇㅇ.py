@@ -1,3 +1,4 @@
+## 고구마
 
 t = int(input())
 for test_case in range(1, t+1):
@@ -38,9 +39,3 @@ for test_case in range(1, t+1):
                 result = potato_sum
  
     print(f'#{test_case} {count} {result}')
-
-
-
-
-
- 
