@@ -21,11 +21,11 @@ for tc in range(1, T+1):
                 break
             result += best2
 
-        if i in arr[0]:
+        if i in arr[2]:
             best3 = 0
-            if arr[0][i] > best3:
+            if arr[2][i] > best3:
                 best3 = arr[2][i]
-            if arr[0][i] < 0:
+            if arr[2][i] < 0:
                 break
             result += best3
 

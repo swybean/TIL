@@ -1,22 +1,25 @@
 T = 10
 for test_case in range(1, T+1):
-    N = int(input()) # 덤프횟수
-    arr = list(map(int, input().split()))   # 각 상자의 높이값 리스트
+    N = int(input()) # 덤프횟수 입력하기
+    arr = list(map(int, input().split()))   # 각 상자의 높이값 리스트 입력하기
 
     arr.sort()  # 상자를 오름차순으로 정렬
-    dump = 0    # 덤프 횟수 셀 변수
+    dump = 0    # 덤프 횟수를 세줄 변수 설정
 
-    while dump < N:    # 덤프 횟수가 N번이 될때까지 반복
+    while dump < N:     # 덤프 횟수가 N번이 될때까지 반복
         arr[-1] -= 1    # 제일 높은 박스에서 -1하고 (뒤에서 첫번째 박스)
         arr[0] += 1     # 제일 낮은 박스에 +1해준다. (제일 앞에 있는 박스)
         dump += 1       # 덤프 횟수에 +1 해주고
         arr.sort()      # 다시 오름차순 정렬, 제일 높은 박스가 바꼈을 수도 있으니까
+        
         # 만약에 제일 높은 상자와 낮은 상자의 차이가 1이하면 정지
+        # (문제에서 주어진 조건 : 덤프 횟수가 남더라도 평탄화 완료되면 중지하라)
         if arr[-1] - arr[0] <= 1:  
             break      
     
-    result = arr[-1] - arr[0]
+    result = arr[-1] - arr[0]   # result = 제일 높은 상자 높이 - 제일 낮은 상자 높이
     print(f'#{test_case} {result}')
+
 
          
 '''

@@ -1,5 +1,5 @@
 
-T = int(input())
+# T = int(input())
 for test_case in range(1, T + 1):
     N = int(input())
     carrot = [list(map(int, input().split())) for _ in range(N)]
@@ -13,10 +13,13 @@ for test_case in range(1, T + 1):
         for j in range(N):
             if i < j and i + j < N - 1: # 영역1 (북쪽 영역)
                 area_book += carrot[i][j]
+
             if i < j and i + j > N - 1:
                 area_dong += carrot[i][j]
+
             if i > j and i + j < N - 1:
                 area_seo += carrot[i][j]
+
             if i > j and i + j > N - 1:
                 area_nam += carrot[i][j]
         
@@ -25,7 +28,3 @@ for test_case in range(1, T + 1):
     result = maxarea - minarea
 
     print(f'#{test_case} {result}')
-
-
-
-    
