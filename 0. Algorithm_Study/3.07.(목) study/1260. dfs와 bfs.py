@@ -18,8 +18,24 @@
 V부터 방문된 점을 순서대로 출력하면 된다.
 '''
 
+def dfs(now):
+    v_dfs[now] = 1
+    print(now, end = ' ')
+    for j in range(1,N+1):
+        if matrix[now][j] == 1 and v_dfs[j] == 0:
+            v_dfs[j] = 1
+            dfs(j)
 
 
+N, M, V = map(int,input().split())          # N 정점의 개수, M 간선의 개수, V 정점의 번호
+matrix = [[0]*(N+1) for _ in range(N+1)]
+
+for _ in range(M):
+    s, e = map(int,input().split())
+    matrix[s][e] = matrix[e][s] = 1
+
+v_dfs = [0] * (N+1)
+dfs(V)
 
 
 
