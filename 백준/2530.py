@@ -5,7 +5,7 @@ current_hour = int(current_time[0])
 current_minute = int(current_time[1])
 current_second = int(current_time[2])
 
-
+   
 # 요리에 필요한 시간 입력
 cooking_time = int(input())
 
