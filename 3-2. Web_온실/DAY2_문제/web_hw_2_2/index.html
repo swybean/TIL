@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>프로필 카드</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .profile-card {
+      width: 350px; /* 카드의 너비를 조절하세요 */
+      border: 1px solid black;
+      overflow: hidden;
+    }
+    .profile-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }    
+    .profile-name {
+      position: absolute;
+      bottom: inherit;
+      top: 270px;
+      background-color: rgb(240, 188, 140);
+      padding: 8px;
+      margin-right: 10px;
+      margin-left: 10px;
+      width: 310px;
+      height: 43px;
+      text-align: center;
+      font-weight: bold;
+      font-size: xx-large;
+      line-height: 1.5;
+      opacity: 0.85;
+    }
+    .profile-description {
+      padding: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-card">
+    <div class="profile-image">
+      <img src="profile.jpg">
+      <p class="profile-name">Name</p>
+    </div>
+    <div class="profile-description">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci unde officiis ad nostrum. Laboriosam mollitia similique provident fuga tenetur saepe sit, amet eaque neque eius quaerat expedita ea illum veniam.</p>
+    </div>
+  </div>
+</body>
+</html>

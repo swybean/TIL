@@ -10,7 +10,7 @@ class StringRepeater:
         for i in range(self.num):
             print(self.repeater1)
 
-    
+       
 
 repeater1 = StringRepeater()
 repeater1.repeat_string(3, "Hello")

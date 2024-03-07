@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Position</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 1500px;
+    }
+
+    .container {
+      position: relative;
+      height: 300px;
+      width: 300px;
+      border: 1px solid black;
+    }
+
+    .box {
+      height: 100px;
+      width: 100px;
+      border: 1px solid black;
+    }
+
+    .static {
+      position: static;
+      background-color: lightcoral;
+    }
+
+    .absolute {
+      position: absolute; /* 자신의 영역을 버린다. 그래서 밑에 있던 fixed, relative가 한칸 올라온다.*/
+      background-color: lightgreen;
+      top: 100px;
+      left: 100px;
+    }
+    /* 본인의 static위치가 없기 때문에 static이 아닌 부모를 찾아가서 그 위치를 기준으로 top, left로 움직인다. */
+    /* 따라서 부모태그를 잘해야 한다. */
+    /* 해당 코드에서는 container가 부모다. 그래서 container는 position을 relative로 준 것 */
+    .relative {
+      position: relative;
+      background-color: lightblue;
+      top: 100px;
+      left: 100px;
+    }
+    /* top, left를 하더라도 본인의 기존 위치(static위치)를 기준으로 움직인다. -> 그래서 상대적 */
+    /* 또한 움직이더라도 자신의 기존위치의 영역도 차지하고 있다. */
+
+    .fixed {
+      position: fixed;
+      background-color: gray;
+      top: 0;
+      right: 0;
+    }
+    /* 앱솔루트와 마찬가지로 본인 위치를 버리고 나간다. */
+    /* 스크롤을 내려도 화면에서 해당 위치를 벗어나지 않고(사라지지 않고) 계속 보인다.  */
+    /* 예시 : 웹툰에서 스크롤 내려도 양쪽에 이전화, 다음화 버튼이 계속 같은 위치에 있는 것 */
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box static">Static</div>
+    <div class="box absolute">Absolute</div>
+    <div class="box relative">Relative</div>
+    <div class="box fixed">Fixed</div>
+  </div>
+</body>
+
+</html>
