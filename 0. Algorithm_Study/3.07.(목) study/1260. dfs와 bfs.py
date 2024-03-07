@@ -30,7 +30,7 @@ def dfs(now):
 def bfs(now, lst):
     v_bfs[now] = 1
     while True:
-        if lst == []:
+        if lst == []:   
             break
         now = lst.pop(0)
         print(now, end = ' ')
