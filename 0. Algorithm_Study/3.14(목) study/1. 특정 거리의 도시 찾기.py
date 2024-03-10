@@ -29,17 +29,38 @@
 bfs로 풀어보기
 '''
 
-N, M, K, X = map(int, input().split())  #도시개수N, 도로개수M, 최단거리정보K, 출발도시번호X
-     
-arr = [[] for _ in range(N+1)]      
+N, M, K, X = map(int, input().split())  # 도시개수N, 도로개수M, 최단거리정보K, 출발도시번호X
+
+arr = [[] for _ in range(N + 1)]  # 간선 정보 저장할 2차원 리스트
 
 for _ in range(M):
-    A, B = map(int, input().split())    
-    arr[A].append(B)            
+    A, B = map(int, input().split())
+    arr[A].append(B)  # 간선 정보 저장
+
+# BFS로 최단 거리 계산
+distance = [-1] * (N + 1)  # 모든 도시에 대한 최단 거리 초기화
+distance[X] = 0  # 출발도시에서 출발도시는 거리 0으로 설정
+
+queue = []          # 빈 큐 만들기
+queue.append(X)     # 시작도시 추가하기
+
+while queue:    # 큐가 비어있지 않은 동안 무한 반복
+    now = queue.pop(0)  # 현재 도시를 큐에서 꺼내오기
+    for i in arr[now]:  # 현재 도시와 연결된 도시들을 반복순회
+        if distance[i] == -1:   # 방문한 적이 없는 도시라면
+            distance[i] = distance[now] + 1 # 해당 도시까지 거리에 +1을 하고 
+            queue.append(i)                 # 큐에 도시 저장
+
+
+for i in range(1, N + 1):   # 모든 거리를 순회하면서
+    if distance[i] == K:    # K와 같다면 출력
+        print(i)
+    else:
+        print(-1)
+
+
 
     
-
-
 
 '''
 4 4 2 1
@@ -57,7 +78,7 @@ for _ in range(M):
 
 -1
 
-4 4 11
+4 4 1 1
 1 2
 1 3
 2 3
