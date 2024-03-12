@@ -8,7 +8,7 @@
 **2. Grid system for responsive web**  
 -Grid system Breakpoints
 
-**3.CSS Layout 종합 정리**  
+**3. CSS Layout 종합 정리**  
 
 
 ---

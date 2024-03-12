@@ -1,0 +1,26 @@
+1. 가상환경 생성
+python -m venv venv
+
+2. 가상환경 활성화
+source venv/Scripts/activate
+
+3. Django 설치
+pip install django
+
+4. 의존성 파일 생성
+pip freeze > requirements.txt
+
+5. Django 프로젝트 생성
+django-admin startproject firstpjt .
+
+6. Django 서버 실행
+python manage.py runserver
+
+7. 앱 생성
+python manage.py startapp articles
+
+8. 앱 등록
+settings.py에서 추가하기
+
+
+
