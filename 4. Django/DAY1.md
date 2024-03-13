@@ -90,6 +90,7 @@ pip freeze > requirements.txt
 
 
 #### Django 프로젝트 생성 전 루틴
+> Django_명령어 모음.txt 참고하기
 1. 가상환경 생성
 2. 가상환경 활성화
 3. Django 설치
