@@ -1,28 +1,26 @@
 
-
 T = int(input())
-for test_case in range(1, T+1):
-    N, M = map(int, input().split())    # N : 컨테이너 수, M : 트럭 수
-    arr_weight = list(map(int, input().split()))    # 화물들의 무게
-    arr_truck = list(map(int, input().split()))     # 트럭들의 적재용량
+for tc in range(1, T+1):
+    N, M = map(int, input().split())
+    container = list(map(int, input().split()))
+    truck = list(map(int, input().split()))
+  
+    container.sort(reverse=True)
+    truck.sort(reverse=True)
 
-    arr_weight.sort()   # 오름차순 정렬
-    arr_truck.sort()    # 오름차순 정렬
-
-    result = 0      # 트럭에 최종적으로 실은 컨테이너 무게
-
-    iren = 0        # result 가기전 변수
-    now_result = 0  # 현재 트럭에 실어볼 컨테이너 무게
-
-    for i in arr_weight:
-        for j in arr_truck:
-            if i <= j:
-                now_result += i
-                if iren < now_result:
-                    iren = now_result
-
-
-        
+    result = 0
+    c_index = 0
+    t_index = 0
+  
+    while c_index < len(container) and t_index < len(truck):
+        if truck[t_index] >= container[c_index]:
+            result += container[c_index]
+            c_index += 1
+            t_index += 1
+        else:
+            c_index += 1
+  
+    print(f'#{tc} {result}')
 
 
 
