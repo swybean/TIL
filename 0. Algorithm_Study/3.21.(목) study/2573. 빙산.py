@@ -11,13 +11,22 @@ def bfs(x, y):
         for k in range(4):
             ni = i + di[k]
             nj = j + dj[k]
-            if 0 <= ni < N and 0 <= nj < M:
-                if arr[ni][nj] == 0:
-                    visited[i][j] += 1
-                
-                if arr[ni][nj] != 0 and visited[ni][nj] == 0:
-                    queue.append(ni, nj)
+            # 범위내에 있고 방문하지 않았으면
+            if 0 <= ni < N and 0 <= nj < M and visited[ni][nj] == 0:
+                # 해당 위치가 빙산이면 방문표시 + 큐에 추가
+                if arr[ni][nj] != 0:
                     visited[ni][nj] += 1
+                    queue.append(ni, nj)
+                
+                # 해당 위치가 바닷물이라면
+                if arr[ni][nj] == 0:
+                    for k in range(4):
+                        ni = i + di[k]
+                        nj = j + dj[k]
+                        # 범위 내에 있고 상하좌우 칸이 빙산이라면
+                        if 0 <= ni < N and 0 <= nj < M and arr[ni][nj] == 1:
+                            arr[ni][nj] -= 1    # 빙산의 숫자를 -1 하기
+                            
 
 
 # 4방향 델타 설정
