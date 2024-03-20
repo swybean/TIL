@@ -1,34 +1,63 @@
-def chonsu(node):
-    counts = 1
-    for child in arr[node]:
-        counts += chonsu(child)
-    if counts > 1:
-        return counts
-    else:
-        return -1
+# def chonsu(node):
+#     counts = 1
+#     for child in arr[node]:
+#         counts += chonsu(child)
+#     if counts >= 1:
+#         return counts
+#     else:
+#         return -1
 
 
 
+# N = int(input())    # 전체 사람의 수 N
+# arr = [[] for _ in range(N+1)]  # 각 노드의 부모-자식 관계를 저장할 리스트 arr 생성
 
-N = int(input())    # 전체 사람의 수 N
+# a, b = map(int, input().split())    # 촌수를 계산해야 할 두 사람의 번호 a, b
 
-a, b = map(int, input().split())    # 촌수를 계산해야 할 두 사람의 번호 a, b
+# nodes = []  # 부모-자식 관계 숫자를 받을 리스트
 
-M = int(input())    # 부모-자식 관계의 수 M
+# M = int(input())    # 부모-자식 관계의 수 M
+
+# # 부모-자식 관계 숫자들을 입력할 1차원 리스트
+# for _ in range(M):
+#     nodes.extend(list(map(int, input().split())))
+
+# # 입력값을 순회하면서 부모-자식 관계를 처리
+# for i in range(0, len(nodes), 2):
+#     parent, child = nodes[i], nodes[i+1]
+#     arr[parent].append(child)
+
+# # print(arr) # [[], [2, 3], [7, 8, 9], [], [5, 6], [], [], [], [], []]
+# print(chonsu(7))
+
+
+def dfs(node):
+    for n in graph[node]:
+        if check[n] == 0:
+            check[n] = check[node]+1
+            dfs(n)
+
+n = int(input())
+
+graph = [[] for _ in range(n+1)]
+
+s, e = map(int, input().split())
+
+M = int(input())
 
 for _ in range(M):
-    nodes = list(map(int, input().split()))     # 부모-자식 관계 쌍 입력할 리스트
+    u, v = map(int, input().split())
+    graph[u].append(v)
+    graph[v].append(u)
 
-arr = [[] for _ in range(M+2)]  # 빈 2차원 리스트 arr 생성
+check = [0]*(n+1)
 
-for i in range(0, len(nodes), 2):
-    parent, child = nodes[i], nodes[i+1]
-    arr[parent].append(child)
-    chonsu(7)
+dfs(s)
 
-
-
-
+if check[e] > 0:
+    print(check[e])
+else:
+    print(-1)
 
 
 '''
@@ -48,8 +77,8 @@ for i in range(0, len(nodes), 2):
 
 
 '''
-SWEA 'subtree' 문제 풀이
-이거부터 이해 완료하고 '촌수계산' 문제 풀기
+# SWEA 'subtree' 문제 풀이
+# 이거부터 이해 완료하고 '촌수계산' 문제 풀기
 
 def subtree(node):
     counts = 1
