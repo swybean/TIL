@@ -16,9 +16,63 @@ N은 2 이상 100 이하의 정수이다.
 
 첫째 줄에 장마철에 물에 잠기지 않는 안전한 영역의 최대 개수를 출력한다.
 '''
- 
+
+# 2%에서 런타임 에러
+def dfs(i, j, h):
+    global visited
+    visited[i][j] = True
+    for d in range(4):
+        ni, nj = i + di[d], j + dj[d]
+        if 0 <= ni < N and 0 <= nj < N and not visited[ni][nj] and area[ni][nj] > h:
+            dfs(ni, nj, h)
+
+N = int(input())  # 지역의 크기
+area = [list(map(int, input().split())) for _ in range(N)]  # 지역의 높이 정보
+
+di = [-1, 1, 0, 0]  # 상하좌우 이동
+dj = [0, 0, -1, 1]
+
+result = 0  # 결과값
+
+# 높이별로 안전한 영역의 개수 구하기
+for h in range(101):  # 높이는 1부터 100까지 가능
+    visited = [[False] * N for _ in range(N)]  # 방문 여부 초기화
+    safe_count = 0  # 안전한 영역 개수
+    for i in range(N):
+        for j in range(N):
+            if not visited[i][j] and area[i][j] > h:
+                dfs(i, j, h)
+                safe_count += 1
+    result = max(result, safe_count)  # 최대값 갱신
+
+print(result) 
 
 
+
+'''
+5
+6 8 2 6 2
+3 2 3 4 6
+6 7 3 3 2
+7 2 5 3 6
+8 9 5 2 7
+
+5
+
+7
+9 9 9 9 9 9 9
+9 2 1 2 1 2 9
+9 1 8 7 8 1 9
+9 2 7 9 7 2 9
+9 1 8 7 8 1 9
+9 2 1 2 1 2 9
+9 9 9 9 9 9 9
+
+6
+'''
+
+
+'''
 def dfs(i, j):
     global num_angun
     global r
@@ -61,27 +115,5 @@ while r < 101:
 print(result)
 
 
-
-
-
 '''
-5
-6 8 2 6 2
-3 2 3 4 6
-6 7 3 3 2
-7 2 5 3 6
-8 9 5 2 7
 
-5
-
-7
-9 9 9 9 9 9 9
-9 2 1 2 1 2 9
-9 1 8 7 8 1 9
-9 2 7 9 7 2 9
-9 1 8 7 8 1 9
-9 2 1 2 1 2 9
-9 9 9 9 9 9 9
-
-6
-'''
