@@ -14,19 +14,40 @@ i번째 줄에는 정점 i의 방문 순서를 출력한다.
 시작 정점의 방문 순서는 1이다. 시작 정점에서 방문할 수 없는 경우 0을 출력한다.
 '''
 
+## pypy3 로 제출해야지 맞음
+## python으로 내면 시간초과
 
-N, M, R = map(int, input().split()) # 정점N, 간선M 수 및 시작정점 R
+import sys
+sys.setrecursionlimit(10**5)  # 재귀 깊이 제한을 늘려줍니다.
 
-arr = [list(map(int, input().split())) for _ in range(N)] # 양방향 간선 정보 u v
-# print(arr) # [[1, 4], [1, 2], [2, 3], [2, 4], [3, 4]]
+N, M, R = map(int, input().split())
 
+# 인접리스트 생성
+adj_list = [[] for _ in range(N + 1)]
 
-def dfs(arr, E, R):
-    visted[R] = True
-    for i in range(1, N+1):
-        
+for _ in range(M):
+    u, v = map(int, input().split())
+    adj_list[u].append(v)
+    adj_list[v].append(u)
 
+visited = [False] * (N + 1)
+order = [0] * (N + 1)
+order_idx = 1
 
+def dfs(node):
+    global order_idx
+    visited[node] = True
+    order[node] = order_idx
+    order_idx += 1
+    for neighbor in sorted(adj_list[node]):
+        if not visited[neighbor]:
+            dfs(neighbor)
+
+dfs(R)
+
+# 출력
+for i in range(1, N + 1):
+    print(order[i])
 
 
 
