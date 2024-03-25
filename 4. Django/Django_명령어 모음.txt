@@ -7,6 +7,9 @@ source venv/Scripts/activate
 3. Django 설치
 pip install django
 
+3-1. requirements.txt 전체 설치
+pip install -r requirements.txt 
+
 4. 의존성 파일 생성
 pip freeze > requirements.txt
 
@@ -21,6 +24,26 @@ python manage.py startapp articles
 
 8. 앱 등록
 settings.py에서 추가하기
+
+9. 최종 설계도 작성
+python manage.py makemigrations
+
+10. DB에 적용
+python manage.py migrate
+
+11. shell 하기 전에 깔아야 하는 것들 (ipyhton, django-extensions)
+pip install ipython
+pip install django-extensions
+
+12. django_extensions를 setting.py에 등록하기
+django_extensions로 등록해야 함
+(언더바인거 주의!)
+
+13. shell 키는법
+python manage.py shell_plus
+
+
+
 
 
 
