@@ -13,7 +13,7 @@
 
 ---
 
-## **1.  Django URLs**
+## **1. Django URLs**
 
 **URL dispatcher**  
 URL 패턴을 정의하고 해당 패턴이 일치하는 요청을 처리할 view 함수를 연결 (매핑)
