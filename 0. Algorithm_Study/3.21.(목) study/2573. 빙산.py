@@ -27,8 +27,6 @@ def bfs(x, y):
                         if 0 <= ni < N and 0 <= nj < M and arr[ni][nj] == 1:
                             arr[ni][nj] -= 1    # 빙산의 숫자를 -1 하기
                             
-
-
 # 4방향 델타 설정
 di = [0, 1, 0, -1]
 dj = [1, 0, -1, 0]  
@@ -45,7 +43,7 @@ visited = [[0] * M for _ in range(N)]
 
 
 
-
+ 
 
 
 '''
