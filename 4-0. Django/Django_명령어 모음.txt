@@ -16,14 +16,16 @@ pip freeze > requirements.txt
 5. Django 프로젝트 생성
 django-admin startproject firstpjt .
 
-6. Django 서버 실행
-python manage.py runserver
-
-7. 앱 생성
+6. 앱 생성
 python manage.py startapp articles
+
+67. Django 서버 실행
+python manage.py runserver
 
 8. 앱 등록
 settings.py에서 추가하기
+
+※ 설계도 작성 전에 모델 변경을 끝내야 한다!
 
 9. 최종 설계도 작성
 python manage.py makemigrations
@@ -31,15 +33,21 @@ python manage.py makemigrations
 10. DB에 적용
 python manage.py migrate
 
-11. shell 하기 전에 깔아야 하는 것들 (ipyhton, django-extensions)
+
+
+
+
+
+※ shell하기 전에 해야 하는 것들
+1. 깔아야 하는 것들 (ipyhton, django-extensions)
 pip install ipython
 pip install django-extensions
 
-12. django_extensions를 setting.py에 등록하기
+2. django_extensions를 setting.py에 등록하기
 django_extensions로 등록해야 함
 (언더바인거 주의!)
 
-13. shell 키는법
+3. shell 키는법
 python manage.py shell_plus
 
 
