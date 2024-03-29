@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {% comment %} user.name이 있을 때만 hello,를 출력하게 하는 if문 {% endcomment %}
+    {% if user.username %}
+    <h2>hello, {{ user.username }} 님</h2>
+    {% endif %}
+
+    {% comment %} 로그인 버튼 만들기 {% endcomment %}
+    <a href="{% url "accounts:login" %}">[LOGIN]</a>
+
+    {% comment %} 로그아웃 버튼 만들기 {% endcomment %}
+    <form action="{% url "accounts:logout" %}" method="POST">
+        {% csrf_token %}
+        <input type="submit" value="Logout">
+    </form>
+
+    {% comment %} 전체유저 목록 반복문으로 전체 유저 출력하기 {% endcomment %}
+    <h1>전체 유저 목록</h1>
+    {% for account in accounts %}
+    <ul>
+        <li>
+            {{ account }}
+            <hr>
+        </li>
+    </ul>
+    {% endfor %}
+</body>
+
+</html>
