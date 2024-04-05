@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+<h1>DETAIL PAGE</h1>
+
+<hr>
+
+<h2>{{ movie.title }}</h2>
+
+<p>{{ movie.content }}</p>
+
+<hr>
+
+<a class="btn btn-success" href="{% url "movies:update" movie.pk %}" role="button">UPDATE</a>
+<a class="btn btn-danger" href="{% url "movies:delete" movie.pk %}" role="button">DELETE</a>
+<br>
+<p></p>
+<a class="btn btn-primary" href="{% url "movies:index" %}">Back</a>
+
+
+
+
+
+{% endblock content %}
