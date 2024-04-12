@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+<h1>DETAIL PAGE</h1>
+
+<hr>
+
+<h2>{{ movie.title }}</h2>
+
+<p>{{ movie.content }}</p>
+
+<p>장르: {{ movie.genre }}</p>
+<p>평점: {{ movie.score }}</p>
+
+<hr>
+
+{% comment %} <a class="btn btn-success" href="{% url "movies:update" movie.pk %}" role="button">UPDATE</a>
+<a class="btn btn-danger" href="{% url "movies:delete" movie.pk %}" role="button">DELETE</a> {% endcomment %}
+<br>
+
+{% if request.user == movie.user %}
+
+    <a class="btn btn-success" href="{% url "movies:update" movie.pk %}" role="button">UPDATE</a>
+
+    <form action="{% url 'movies:delete' movie.pk %}" method="POST">
+        {% csrf_token %}
+        <input type="submit" value="DELETE" class="btn btn-danger">
+    </form>
+
+{% endif %}
+
+<h3>댓글 목록</h3>
+{% comment %} {{ comments }}
+{{ movie_set }} {% endcomment %}
+
+{% for comment in comments %}
+
+    <p>{{ comment.user }} - {{ comment.content }}</p>
+    {% comment %} 반복문 안에 p태그로 감싸면 모든 항목이 p태그로 감싸져서 나온다. {% endcomment %}
+
+
+        {% if request.user == comment.user %}
+            <form action="{% url "movies:comment_delete" movie.pk comment.pk %}" method='POST'>
+                {% csrf_token %}
+                <input type="submit" value="댓글 삭제">
+            </form>
+
+        {% endif %}
+
+
+{% endfor %}
+
+<h3>댓글 등록</h3>
+<form action="{% url 'movies:comment_create' movie.pk %}" method="POST">
+    {% csrf_token %}
+    {{ comment_form }}
+    <input type="submit" value="작성">
+</form>
+
+
+
+<a class="btn btn-primary" href="{% url "movies:index" %}">Back</a>
+
+{% endblock content %}
