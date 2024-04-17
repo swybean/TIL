@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 동등 연산자를 활용한 조건문
+    if (0 == []) {
+      console.log('true?')
+    } else {
+      console.log('false?')
+    }
+    // 실행 결과 : true?
+
+    // 일치 연산자를 활용한 조건문
+    if ({} === false) {
+      console.log('true?')
+    } else {
+      console.log('false?')
+    }
+    // 실행 결과 : false?
+
+    // 논리 연산자를 활용한 단축 평가
+    console.log(0 && 13)
+    // 실행 결과 : 0
+    // 논리연산에서 0은 false이고, 13은 true여서 / 하나라도 거짓이면 거짓을 반환
+    console.log(0 || 13)
+    // 실행 결과 : 13
+    // 둘 중 하나만 참이면 참을 반환, 13이 참이라 참을 반환
+
+    let num = 12
+    num /= 3
+    console.log(num)
+    // 실행 결과 : 4
+
+    const number = 13
+    number++
+    // 실행 결과 : 오류 발생, const로 변수 만들어서 재할당 불가능
+
+
+
+
+
+  </script>
+</body>
+</html>

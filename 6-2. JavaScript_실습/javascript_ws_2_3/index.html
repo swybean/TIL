@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const scores = [90, 80, 70, 60, 40]
+    
+    // for .. of 문으로 코드 작성
+    // for문 안넣고 구하기
+    // 주어진 배열 scores의 길이를 계산하여 length 변수에 할당하고, 출력하시오.
+    // const length = scores.length
+    // console.log(length)
+
+    // 주어진 배열 scores가 가진 요소들의 총 합을 계산하여 출력하시오.
+    // for문 안에서 렝쓰랑 썸 구하기
+    let length = 0 
+    let sum = 0
+    for (const score of scores) {
+      length ++  // length += 1 이랑 같다.
+      sum += score
+    }
+    console.log(length)
+    console.log(sum)
+
+    // scores가 가진 요소들의 평균 값을 출력하시오.
+    const average = sum / length
+    console.log(average)
+
+    // while문으로 코드 작성
+    // scores 배열의 요소들을 역순으로 출력하시오.
+    let index = length - 1
+    while (index >= 0) {
+      console.log(scores[index]);
+      index -= 1
+    }
+
+  </script>
+</body>
+</html>
