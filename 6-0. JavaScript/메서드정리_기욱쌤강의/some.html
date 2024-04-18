@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 단 하나의 요소라도, 조건에 만족한다면 true
+
+        //some 1 
+        const arr = [1, 2, 3, 4, 5]
+
+        const res = arr.some((num) => num % 2 === 0) // true가 하나라도 있으면
+        console.log(res)
+
+
+
+        // some 2
+
+        const requests = [
+            { url: '/photos', status: 'complete' },
+            { url: '/albums', status: 'pending' },
+            { url: '/users', status: 'failed' },
+            ]
+
+        const re = requests.some((request) => request.status === 'complete')
+        console.log(re)
+
+    </script>
+</body>
+</html>
