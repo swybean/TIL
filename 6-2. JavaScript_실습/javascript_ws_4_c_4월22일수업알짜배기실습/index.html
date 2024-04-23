@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .bg-color {
+      background-color: #f0f0f0;
+      padding: 20px;
+      margin: 20px;
+    }
+
+    .fs-2 {
+      font-size: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <h2>Input</h2>
+    <input type="text" class="text-input">
+    <span class="warning" style="color: red; display: none;">글자 수를 초과하였습니다.</span>
+    <p></p>
+  </div>
+  <div>
+    <h2>Color</h2>
+    <input type="text" class="color-input">
+  </div>
+
+  <script>
+    // 아래에 코드 작성
+
+    // inputTag 선언
+    const inputTag = document.querySelector('.text-input')
+    console.log(inputTag)
+    // 사용자가 입력하는 텍스트를 p 요소 컨텐츠에 입력
+    // pTag 선언
+    const pTag = document.querySelector('p')
+    console.log(pTag)
+
+    // input 이벤트리스너 추가
+    inputTag.addEventListener('input', function(event) {
+      // 사용자 입력을 실시간으로 p 태그에 반영
+      pTag.textContent = inputTag.value
+      // console.log(inputTag.value)
+      // console.log(pTag.textContent)
+    })
+
+    // input 요소에 focus가 잡히면
+    inputTag.addEventListener('focusin', function(event) {
+      // p요소 폰트 크기 2rem으로 변경 (fs-2 클래스 스타일 속성 활용)
+      pTag.classList.add('fs-2')
+      // p요소 배경 컬러 회색으로 변경 (bg-color 클래스 스타일 속성 활용)
+      pTag.classList.add('bg-color')
+    })
+    
+    // input 요소에 focus가 해제되면
+    inputTag.addEventListener('focusout', function(event) {
+      // 모든 스타일을 해제
+      pTag.classList.remove('fs-2')
+      pTag.classList.remove('bg-color')
+    })
+    
+    // 경고문구 변수 선언
+    const warningText = document.querySelector('.warning')
+
+    inputTag.addEventListener('input', function(event) {
+      // 입력값 길이 판단할 변수
+      const textLength = inputTag.value.length
+      // 작성하는 텍스트 킬이가 5 초과라면
+      // warning class인 span 요소를 화면에 출력, p요소는 출력X
+      if (textLength > 5) {
+        warningText.style.display = 'block'
+        pTag.textContent = ''
+      // 작성하는 텍스트 킬이가 5 이하라면
+      // warning class인 span 요소를 화면에 출력X, p요소는 출력
+      } else {
+        warningText.style.display = 'none'
+        pTag.textContent = inputTag.value
+      }
+    })
+
+    // colorInput 변수 선언
+    const colorInput = document.querySelector('.color-input')
+
+    // colorInput에 이벤트 리스너 (input)으로 추가
+    colorInput.addEventListener('input', function (event) {
+      // 유효한 컬러 이름이 입력되면 pTag의 글자색을 해당 값으로 변경
+      if (isValidColor(colorInput.value)) {
+        pTag.style.color = colorInput.value
+        // 유효하지 않은 컬러 이름이 들어오면 기본 색상으로 변경
+      } else {
+        pTag.style.color = ''
+      }
+    })
+
+    // 입력값이 유효한 색상 이름인지 검사하는 함수
+    // new Option().style은 실제 DOM에 요소를 추가하지 않고 검증할 수 있게 하는 것
+    // 임시 객체를 생성하여 CSS 속성을 유효한지 검증해준다.
+    function isValidColor(strColor) {
+      const s = new Option().style
+      // 유요한 색상값이라면 s.color에 색상 값을 저장
+      s.color = strColor
+      // 유효하지 않은 값이 입력된다면 색상값을 빈문자열로 설정
+      return s.color !== ''
+    }
+
+
+
+  </script>
+</body>
+
+</html>

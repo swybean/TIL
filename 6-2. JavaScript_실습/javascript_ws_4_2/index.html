@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .warning-message {
+        color: red;
+      }
+    </style>
+</head>
+<body>
+  <h1>Sign up</h1>
+  <form>
+    <div>
+      <label for="username">username: </label>
+      <input type="text" id="username">
+    </div>
+
+    <div>
+      <label for="password1">password: </label>
+      <input type="password" id="password1">
+      <span id="warning1" class="warning-message"></span>
+    </div>
+
+    <div>
+      <label for="password2">password confirmation: </label>
+      <input type="password" id="password2">
+      <span id="warning2" class="warning-message"></span>
+    </div>
+    
+    <button>Signup</button>
+  </form>
+
+  <script>
+    /* 
+      회원가입시, 서버에 데이터가 전송되기 전에 js로 비밀번호의 유효성 검사를 진행하고자 한다.
+      아래의 조건을 만족하지 않으면, 에러메시지를 화면에 출력하도록 코드를 완성하시오.
+      1. password1이 8자를 넘지 않으면 span#warning1 에 '비밀번호는 8자 이상이어야 합니다.' 라는 에러메시지 출력
+      2. password2가 password1과 같지 않으면 '비밀번호가 일치하지 않습니다.' 라는 에러메시지 출력
+      3. 문제가 없을시 에러메시지 삭제
+    */
+
+    // 사용할 변수들 선언
+    // 1차 비밀번호 설정 입력값 변수
+    const passwordInput = document.querySelector('#password1')
+    console.log(passwordInput)
+    // 2차 비밀번호 확인 입력값 변수
+    const passwordConfirm = document.querySelector('#password2')
+    console.log(passwordConfirm)
+
+    // 1차 비밀번호 에러 메시지 변수
+    const warningMessage = document.querySelector('#warning1')
+    console.log(warningMessage)
+
+    // 2차 비밀번호 에러 메시지 변수
+    const warningTwo = document.querySelector('#warning2')
+    console.log(warningTwo)
+
+
+    passwordInput.addEventListener('focusout', function (event) {
+      const pwLength = passwordInput.value.length
+      if (pwLength < 8) {
+        warningMessage.textContent = '비밀번호는 8자 이상이어야 합니다.'
+      } else {
+        warningMessage.textContent = ''
+      }
+    })
+
+    passwordConfirm.addEventListener('focusout', function (event) {
+      if (passwordConfirm.value !== passwordInput.value) {
+        warningTwo.textContent = '비밀번호가 일치하지 않습니다.'
+      } else {
+        warningTwo.textContent = ''
+      }
+    })
+
+
+
+
+
+
+
+  </script>
+
+</body>
+</html>

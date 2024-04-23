@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 해당 CDN 밑에 작성된 script부터 사용이 가능해진다. -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  
+  <script>
+    const URL = 'https://api.thecatapi.com/v1/images/search'
+
+    // 1.
+    const promiseObj = axios({
+      method: 'GET',
+      url: URL
+    })
+
+    // console.log(promiseObj)
+
+    promiseObj.then((response) => {
+      console.log(response)
+      console.log(response.data)
+      return response.data
+      console.log(response.data[0].url)
+    }).then((response) => { //여기 response에 들어오는건 return한 response.data
+
+    })
+    
+    // cat api로 보낸 요청에 대한 응답을 기다리지 않고 여기로 넘어옴
+    console.log('hahahahahaha')
+
+
+    // 2. 대부분 2번을 사용한다. 1번 사용 X 
+    axios({
+      method: 'GET',
+      url: URL
+    })
+      .then((response) => {
+        console.log(response)
+        console.log(response.data)
+        console.log(response.data[0].url)
+      })
+
+  </script>
+
+</body>
+
+</html>
