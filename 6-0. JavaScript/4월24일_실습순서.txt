@@ -1,0 +1,81 @@
+0번
+cdn 설정하기
+
+1번
+form 태그의 action과 method 지우기 -> axios로 대체되기 때문.
+form 태그에 id 혹은 class 주기
+
+2번
+이벤트가 발생하는 form을 formTag 변수 선언
+
+3번
+formTag에 이벤트핸들러 부착
+
+4번 
+이벤트 기본동작 취소
+event.preventDefault()
+
+5번
+axios 작성
+method, url, headers
+
+6번 
+form에서 JS에게 전달할 프로필 유저 pk준비
+data-user-id="{{ person.pk }}"
+
+7번
+HTML에서 전달받은 프로필 유저의 pk 값 조회 및 변수 선언
+const userId = event.currentTarget.dataset.userId
+
+8번
+axios의 url에 7번에서 선언한 userId 변수 넣기
+
+9번
+csrf 토큰의 value 값 조회 및 변수 선언
+const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value
+
+10번
+axios의 headers에 csrf 토큰 값 지정
+headers: {'X-CSRFToken': csrftoken},
+
+11번
+.then(), .catch 작성
+
+12번
+then에 팔로우 여부를 알려주는 변수 선언
+const isFollowed = response.data.is_followed
+
+13번
+isFollowed에 따라 팔로우/언팔로우 버튼 토
+const followBtn = document.querySelector('input[type=submit]')
+if (isFollowed === true) {
+    followBtn.value = '언팔로우'
+} else {
+    followBtn.value = '팔로우'
+}
+
+14번
+팔로윙/팔로워 수 비동기 적용 선택을 위해 span 태그 지정
+팔로잉 : <span id="followings-count">{{ person.followings.all|length }}</span> / 
+팔로워 : <span id="followers-count">{{ person.followers.all|length }}</span>
+
+15번
+팔로잉/팔로워 수를 출력하는 span 태그 선택
+const followingsCountTag = document.querySelector('#followings-count')
+const followersCountTag = document.querySelector('#followers-count')
+
+16번 
+django가 계산한 팔로잉/팔로워 수를 받아서 span 태그의 컨텐츠를 업데이트
+
+followingsCountTag.textContent = response.data.followings_count
+followersCountTag.textContent = response.data.followers_count
+
+
+
+타켓 : 이벤트가 직접 발생한 곳 
+커런트 타겟 : 이벤트 리스너가 붙어 있는 곳
+*데이터-는 타겟을 정하는 것이랑은 상관없음, 
+JS에서 데이터를 가져오기 위한 것일뿐
+
+
+
