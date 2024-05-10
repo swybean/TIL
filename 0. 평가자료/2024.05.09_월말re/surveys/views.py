@@ -89,9 +89,8 @@ def question_good(request, topic_pk, question_pk):
     good_question.good_question += 1
     good_question.save()
     return Response({'good_question': f'{good_question.good_question}' })
-    ### 필드이름을 good_question으로 설정하라고 해서 설정한다.
-    ### Question 모델에서 pk가 같은 것을 good_question으로 할당해준다.
-    ### 그리고 좋아요 개수 이름도 good_question이니까 good_question.good_question의 개수를 += 1해준다.
+    ### 필드이름을 good_question으로 설정하라고 해서 설정하고 Question 모델에서 pk가 같은 것을 good_question으로 할당해준다.
+    ### 그리고 Question 모델에서 좋아요 개수 필드명도 good_question이니까 good_question.good_question의 개수를 += 1해준다.
     ### DB에 저장될 수 있도록 good_question.save()를 해준다.
 
 
@@ -140,7 +139,12 @@ def answer_create_list(request, choice_pk):
     choice = get_object_or_404(Choice, pk=choice_pk)
 
     if request.method == 'POST':
-        pass
+        serializer = AnswerSerializer(data=request.data)
+        if serializer.is_valid(raise_exception=True):
+            serializer.save(question=choice.question, choice=choice)
+            return Response(serializer.data)
+        ### Choice 모델에 있는 question 외래키와 choice 객체를 활용하여, 
+        ### 답변 데이터가 POST로 오면 저장할 수 있게끔 작성하였다.
     else:
         answers = choice.answer_set.all()
         serializer = AnswerListSerializer(answers, many=True)
@@ -155,7 +159,8 @@ def answer_create_list(request, choice_pk):
 def answer_detail_update_delete(request, choice_pk, answer_pk):
     answer = get_object_or_404(Answer, pk=answer_pk)
     if request.method == 'PUT':
-        serializer = AnswerUpdateSerializer(answer, data=request.data)
+        serializer = AnswerUpdateSerializer(answer, data=request.data, partial=True)
+        ### 여기에 partial을 True로 설정하게 되면 각 테이블을 단독으로 수정이 가능해진다.
         if serializer.is_valid(raise_exception=True):
             serializer.save()
             return Response(serializer.data)
