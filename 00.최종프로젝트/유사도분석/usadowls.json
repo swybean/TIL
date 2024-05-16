@@ -1,0 +1,254 @@
+[
+    [
+        {
+            "title": "아이언맨",
+            "similarity_score": 0.798227912545304
+        },
+        {
+            "title": "어벤져스",
+            "similarity_score": 0.6750938457352803
+        },
+        {
+            "title": "어벤져스: 인피니티 워",
+            "similarity_score": 0.6750938457352803
+        },
+        {
+            "title": "어벤져스: 엔드게임",
+            "similarity_score": 0.6750938457352803
+        },
+        {
+            "title": "오펜하이머",
+            "similarity_score": 0.4843936601857227
+        },
+        {
+            "title": "우리 함께 아웃백으로!",
+            "similarity_score": 0.44008854794864705
+        },
+        {
+            "title": "인셉션",
+            "similarity_score": 0.4285178535656083
+        },
+        {
+            "title": "가디언즈 오브 갤럭시 Vol. 2",
+            "similarity_score": 0.4285178535656083
+        },
+        {
+            "title": "스타워즈 에피소드 4: 새로운 희망",
+            "similarity_score": 0.4285178535656083
+        },
+        {
+            "title": "가디언즈 오브 갤럭시 Volume 3",
+            "similarity_score": 0.4285178535656083
+        }
+    ],
+    [
+        {
+            "title": "귀멸의 칼날 극장판: 무한열차편",
+            "similarity_score": 1.0
+        },
+        {
+            "title": "소드 아트 온라인 -오디널 스케일-",
+            "similarity_score": 0.5421173716388058
+        },
+        {
+            "title": "노 게임 노 라이프 -제로-",
+            "similarity_score": 0.4959809675171132
+        },
+        {
+            "title": "드래곤 길들이기 2",
+            "similarity_score": 0.45240896268263275
+        },
+        {
+            "title": "장화신은 고양이: 끝내주는 모험",
+            "similarity_score": 0.45240896268263275
+        },
+        {
+            "title": "라야와 마지막 드래곤",
+            "similarity_score": 0.45240896268263275
+        },
+        {
+            "title": "울고 싶은 나는 고양이 가면을 쓴다",
+            "similarity_score": 0.4457416245545608
+        },
+        {
+            "title": "신과함께-인과 연",
+            "similarity_score": 0.43590882017482924
+        },
+        {
+            "title": "루카",
+            "similarity_score": 0.421855591350798
+        },
+        {
+            "title": "슈퍼 마리오 브라더스",
+            "similarity_score": 0.421855591350798
+        }
+    ],
+    [
+        {
+            "title": "너의 이름은.",
+            "similarity_score": 1.0000000000000002
+        },
+        {
+            "title": "목소리의 형태",
+            "similarity_score": 0.5571908758519855
+        },
+        {
+            "title": "바이올렛 에버가든 외전: 영원과 자동수기인형",
+            "similarity_score": 0.4854715465761157
+        },
+        {
+            "title": "기븐 극장판",
+            "similarity_score": 0.4603870075524381
+        },
+        {
+            "title": "내 이름은 꾸제트",
+            "similarity_score": 0.4603870075524381
+        },
+        {
+            "title": "바람이 분다",
+            "similarity_score": 0.4603870075524381
+        },
+        {
+            "title": "이 세상의 한구석에",
+            "similarity_score": 0.4603870075524381
+        },
+        {
+            "title": "너의 췌장을 먹고 싶어",
+            "similarity_score": 0.4603870075524381
+        },
+        {
+            "title": "일곱 개의 대죄: 빛에 저주받은 자들",
+            "similarity_score": 0.4462118899323518
+        },
+        {
+            "title": "마루 밑 아리에티",
+            "similarity_score": 0.43768240160481287
+        }
+    ],
+    [
+        {
+            "title": "탑건: 매버릭",
+            "similarity_score": 1.0
+        },
+        {
+            "title": "위플래쉬",
+            "similarity_score": 0.5626633247093709
+        },
+        {
+            "title": "레인 맨",
+            "similarity_score": 0.4346222829479961
+        },
+        {
+            "title": "내 어머니의 모든 것",
+            "similarity_score": 0.4346222829479961
+        },
+        {
+            "title": "길버트 그레이프",
+            "similarity_score": 0.3357185736825791
+        },
+        {
+            "title": "RRR: 라이즈 로어 리볼트",
+            "similarity_score": 0.325799912574381
+        },
+        {
+            "title": "1917",
+            "similarity_score": 0.325799912574381
+        },
+        {
+            "title": "더 우먼 킹",
+            "similarity_score": 0.325799912574381
+        },
+        {
+            "title": "택시운전사",
+            "similarity_score": 0.325799912574381
+        },
+        {
+            "title": "스나이퍼: 화이트 레이븐",
+            "similarity_score": 0.325799912574381
+        }
+    ],
+    [
+        {
+            "title": "줄무늬 파자마를 입은 소년",
+            "similarity_score": 0.39237352746803
+        },
+        {
+            "title": "디파티드",
+            "similarity_score": 0.38493905560308156
+        },
+        {
+            "title": "겟 아웃",
+            "similarity_score": 0.37571760859184006
+        },
+        {
+            "title": "디 아더스",
+            "similarity_score": 0.37571760859184006
+        },
+        {
+            "title": "악마를 보았다",
+            "similarity_score": 0.37571760859184006
+        },
+        {
+            "title": "나를 찾아줘",
+            "similarity_score": 0.3265254720762739
+        },
+        {
+            "title": "블랙 스완",
+            "similarity_score": 0.3265254720762739
+        },
+        {
+            "title": "프레디의 피자가게",
+            "similarity_score": 0.3089114002058103
+        },
+        {
+            "title": "카메라를 멈추면 안 돼!",
+            "similarity_score": 0.3089114002058103
+        },
+        {
+            "title": "어린왕자",
+            "similarity_score": 0.2963989710874043
+        }
+    ],
+    [
+        {
+            "title": "배트맨 비긴즈",
+            "similarity_score": 0.7975848705116829
+        },
+        {
+            "title": "JFK",
+            "similarity_score": 0.5670635176099187
+        },
+        {
+            "title": "프레스티지",
+            "similarity_score": 0.5453919102015686
+        },
+        {
+            "title": "포드 V 페라리",
+            "similarity_score": 0.47956846227785727
+        },
+        {
+            "title": "킬 빌: 2부",
+            "similarity_score": 0.47956846227785715
+        },
+        {
+            "title": "칠드런 오브 맨",
+            "similarity_score": 0.4544593485930051
+        },
+        {
+            "title": "무간도",
+            "similarity_score": 0.43323038753626353
+        },
+        {
+            "title": "나이브스 아웃",
+            "similarity_score": 0.4030661065669449
+        },
+        {
+            "title": "살인의 추억",
+            "similarity_score": 0.3988718425021985
+        },
+        {
+            "title": "배신자",
+            "similarity_score": 0.3988718425021985
+        }
+    ]
+]

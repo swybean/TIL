@@ -1,14 +1,14 @@
 [
     {
         "title": "기생충",
-        "movie_id": 496243,
+        "pk": 496243,
         "poster_url": "https://image.tmdb.org/t/p/w500//eRM0PykovgtK4lin1D4BUql8TBa.jpg",
         "genres": [
             "코미디",
             "스릴러",
             "드라마"
         ],
-        "actors": [
+        "casts": [
             "송강호",
             "이선균",
             "조여정",
@@ -18,14 +18,14 @@
     },
     {
         "title": "인셉션",
-        "movie_id": 27205,
+        "pk": 27205,
         "poster_url": "https://image.tmdb.org/t/p/w500//zTgjeblxSLSvomt6F6UYtpiD4n7.jpg",
         "genres": [
             "액션",
             "SF",
             "모험"
         ],
-        "actors": [
+        "casts": [
             "레오나르도 디카프리오",
             "조셉 고든레빗",
             "와타나베 켄",
@@ -35,14 +35,14 @@
     },
     {
         "title": "아이언맨 3",
-        "movie_id": 68721,
+        "pk": 68721,
         "poster_url": "https://image.tmdb.org/t/p/w500//pGMfidaVkjMVHXNIl7yippnipFT.jpg",
         "genres": [
             "액션",
             "모험",
             "SF"
         ],
-        "actors": [
+        "casts": [
             "로버트 다우니 주니어",
             "기네스 팰트로",
             "돈 치들",
@@ -52,7 +52,7 @@
     },
     {
         "title": "아바타",
-        "movie_id": 19995,
+        "pk": 19995,
         "poster_url": "https://image.tmdb.org/t/p/w500//idvaCRXzHxiUprGBCpp7s7CSRhP.jpg",
         "genres": [
             "액션",
@@ -60,7 +60,7 @@
             "판타지",
             "SF"
         ],
-        "actors": [
+        "casts": [
             "샘 워싱턴",
             "조 샐다나",
             "시고니 위버",
@@ -70,7 +70,7 @@
     },
     {
         "title": "귀멸의 칼날 극장판: 무한열차편",
-        "movie_id": 635302,
+        "pk": 635302,
         "poster_url": "https://image.tmdb.org/t/p/w500//mxdVTei65ymzhJlalIEtR1qSgV2.jpg",
         "genres": [
             "액션",
@@ -79,7 +79,7 @@
             "판타지",
             "스릴러"
         ],
-        "actors": [
+        "casts": [
             "하나에 나츠키",
             "키토 아카리",
             "시모노 히로",
@@ -89,13 +89,13 @@
     },
     {
         "title": "미 비포 유",
-        "movie_id": 296096,
+        "pk": 296096,
         "poster_url": "https://image.tmdb.org/t/p/w500//aCnkVi4QTuc7E0d0qp0SAnRA3M0.jpg",
         "genres": [
             "드라마",
             "로맨스"
         ],
-        "actors": [
+        "casts": [
             "에밀리아 클라크",
             "샘 클라플린",
             "Janet McTeer",
@@ -105,13 +105,13 @@
     },
     {
         "title": "악마를 보았다",
-        "movie_id": 49797,
+        "pk": 49797,
         "poster_url": "https://image.tmdb.org/t/p/w500//xAhsrqrsMIO7YwKbLAlWatzFbgX.jpg",
         "genres": [
             "스릴러",
             "공포"
         ],
-        "actors": [
+        "casts": [
             "이병헌",
             "최민식",
             "전국환",
@@ -121,7 +121,7 @@
     },
     {
         "title": "토이 스토리",
-        "movie_id": 862,
+        "pk": 862,
         "poster_url": "https://image.tmdb.org/t/p/w500//5ELwzkC7QY9vug20AvRFOXBzLbG.jpg",
         "genres": [
             "애니메이션",
@@ -129,7 +129,7 @@
             "가족",
             "코미디"
         ],
-        "actors": [
+        "casts": [
             "톰 행크스",
             "팀 앨런",
             "Don Rickles",
@@ -139,14 +139,14 @@
     },
     {
         "title": "어바웃 타임",
-        "movie_id": 122906,
+        "pk": 122906,
         "poster_url": "https://image.tmdb.org/t/p/w500//f9CQblm419ysGBS697WUfGN0FoI.jpg",
         "genres": [
             "드라마",
             "로맨스",
             "판타지"
         ],
-        "actors": [
+        "casts": [
             "도널 글리슨",
             "레이첼 맥아담스",
             "빌 나이",
@@ -156,14 +156,14 @@
     },
     {
         "title": "너의 이름은.",
-        "movie_id": 372058,
+        "pk": 372058,
         "poster_url": "https://image.tmdb.org/t/p/w500//2DJCufz3Oa703PbLjNX1pM6MCG2.jpg",
         "genres": [
             "애니메이션",
             "로맨스",
             "드라마"
         ],
-        "actors": [
+        "casts": [
             "카미키 류노스케",
             "Mone Kamishiraishi",
             "나리타 료",
@@ -173,13 +173,13 @@
     },
     {
         "title": "쇼생크 탈출",
-        "movie_id": 278,
+        "pk": 278,
         "poster_url": "https://image.tmdb.org/t/p/w500//qV9BQZdiM8foEzDz0Ag5hGWE5qM.jpg",
         "genres": [
             "드라마",
             "범죄"
         ],
-        "actors": [
+        "casts": [
             "팀 로빈스",
             "모건 프리먼",
             "Bob Gunton",
@@ -189,7 +189,7 @@
     },
     {
         "title": "라라랜드",
-        "movie_id": 313369,
+        "pk": 313369,
         "poster_url": "https://image.tmdb.org/t/p/w500//ad9ndytwOckyShSc0A6tx1rZRkW.jpg",
         "genres": [
             "코미디",
@@ -197,7 +197,7 @@
             "로맨스",
             "음악"
         ],
-        "actors": [
+        "casts": [
             "라이언 고슬링",
             "엠마 스톤",
             "존 레전드",
@@ -207,13 +207,13 @@
     },
     {
         "title": "탑건: 매버릭",
-        "movie_id": 361743,
+        "pk": 361743,
         "poster_url": "https://image.tmdb.org/t/p/w500//jeqXUwNilvNqNXqAHsdwm5pEfae.jpg",
         "genres": [
             "액션",
             "드라마"
         ],
-        "actors": [
+        "casts": [
             "톰 크루즈",
             "마일스 텔러",
             "존 햄",
@@ -223,13 +223,13 @@
     },
     {
         "title": "피아니스트",
-        "movie_id": 423,
+        "pk": 423,
         "poster_url": "https://image.tmdb.org/t/p/w500//t7L2YDpu635qKT3ehqZxry4yvTX.jpg",
         "genres": [
             "드라마",
             "전쟁"
         ],
-        "actors": [
+        "casts": [
             "에이드리언 브로디",
             "토마스 크레치만",
             "Frank Finlay",
@@ -239,30 +239,30 @@
     },
     {
         "title": "컨저링",
-        "movie_id": 138843,
+        "pk": 138843,
         "poster_url": "https://image.tmdb.org/t/p/w500//pWpTToZ32bG09PaZ1rvYG5mpOyV.jpg",
         "genres": [
             "공포",
             "스릴러"
         ],
-        "actors": [
+        "casts": [
             "패트릭 윌슨",
             "베라 파미가",
             "Lili Taylor",
-            "Ron Livingston",
+            "론 리빙스턴",
             "맥켄지 포이"
         ]
     },
     {
         "title": "파묘",
-        "movie_id": 838209,
+        "pk": 838209,
         "poster_url": "https://image.tmdb.org/t/p/w500//tw0i3kkmOTjDjGFZTLHKhoeXVvA.jpg",
         "genres": [
             "미스터리",
             "공포",
             "스릴러"
         ],
-        "actors": [
+        "casts": [
             "최민식",
             "김고은",
             "유해진",
@@ -272,7 +272,7 @@
     },
     {
         "title": "다크 나이트",
-        "movie_id": 155,
+        "pk": 155,
         "poster_url": "https://image.tmdb.org/t/p/w500//9ICUbdveP56jRoMMVkXSOr3ceyV.jpg",
         "genres": [
             "드라마",
@@ -280,7 +280,7 @@
             "범죄",
             "스릴러"
         ],
-        "actors": [
+        "casts": [
             "크리스찬 베일",
             "히스 레저",
             "마이클 케인",
@@ -290,14 +290,14 @@
     },
     {
         "title": "스파이더맨: 노 웨이 홈",
-        "movie_id": 634649,
+        "pk": 634649,
         "poster_url": "https://image.tmdb.org/t/p/w500//fvqoI9r1GU2EFkc0xjZ6dKCuDVR.jpg",
         "genres": [
             "액션",
             "모험",
             "SF"
         ],
-        "actors": [
+        "casts": [
             "톰 홀랜드",
             "젠데이아",
             "베네딕트 컴버배치",
@@ -307,14 +307,14 @@
     },
     {
         "title": "인터스텔라",
-        "movie_id": 157336,
+        "pk": 157336,
         "poster_url": "https://image.tmdb.org/t/p/w500//zDNAeWU0PxKolEX1D8Vn1qWhGjH.jpg",
         "genres": [
             "모험",
             "드라마",
             "SF"
         ],
-        "actors": [
+        "casts": [
             "매튜 매커너히",
             "앤 해서웨이",
             "제시카 차스테인",
@@ -324,16 +324,16 @@
     },
     {
         "title": "7번방의 선물",
-        "movie_id": 158445,
+        "pk": 158445,
         "poster_url": "https://image.tmdb.org/t/p/w500//c9TqJPm4pZCuiEXumTayoNIrBSK.jpg",
         "genres": [
             "드라마",
             "코미디"
         ],
-        "actors": [
+        "casts": [
             "류승룡",
             "박신혜",
-            "Kal So-won",
+            "갈소원",
             "정진영",
             "오달수"
         ]
