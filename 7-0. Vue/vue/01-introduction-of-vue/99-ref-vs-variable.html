@@ -9,8 +9,8 @@
 
 <body>
   <div id="app">
-    <p>반응형 변수: {{ refValue }}</p>
-    <p>일반 변수: {{ normalValue }}</p>
+    <p>반응형 변수: {{ refValue }} 는 증가하지만,</p>
+    <p>일반 변수: {{ normalValue }} 는 증가하지 않는다.</p>
     <button v-on:click="increment">값 업데이트</button>
   </div>
 
@@ -29,6 +29,7 @@
 
         const increment = function () {
           normalValue++
+          
           refValue.value++
           // console.log(normalValue)
         }
