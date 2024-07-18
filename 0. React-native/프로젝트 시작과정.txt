@@ -1,0 +1,120 @@
+expo로 리액트 네이티브-안드로이드 에뮬 프로젝트 하는법
+
+### 1. 생성하는 법
+- 바탕화면 깃배시에서 실행
+ npx create-expo-app 앱이름
+
+### 2. 프로젝트 파일로 이동 및 VScode로 열기
+cd 앱이름
+code .
+
+### 3. 프로젝트 실행
+npm run android
+
+
+### 4. App.js로 시작화면 만들기
+- App.js 와 index.js 생성하기
+(기본 예시 코드는 아래에 있음)
+
+- package.json에서 "main": "index.js"로 수정하기
+
+
+
+
+
+
+## App.js 예시 코드
+import React from "react";
+import { AppRegistry, StyleSheet, Text, View } from "react-native";
+
+const App = () => {
+  return (
+    <View style={styles.container}>
+      <Text>Open up App.js to start working on your app!</Text>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});
+
+// Register the main component
+AppRegistry.registerComponent("main", () => App);
+
+export default App;
+
+---
+
+## index.js 예시 코드
+
+import { registerRootComponent } from "expo";
+import App from "./App";
+
+// Register the main component
+registerRootComponent(App);
+
+---
+
+## package.json 예시 코드
+
+{
+  "name": "ddalkack",
+  "main": "index.js",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "expo start",
+    "reset-project": "node ./scripts/reset-project.js",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "test": "jest --watchAll",
+    "lint": "expo lint"
+  },
+  "jest": {
+    "preset": "jest-expo"
+  },
+  "dependencies": {
+    "@expo/vector-icons": "^14.0.2",
+    "@react-navigation/native": "^6.0.2",
+    "expo": "~51.0.21",
+    "expo-constants": "~16.0.2",
+    "expo-font": "~12.0.9",
+    "expo-linking": "~6.3.1",
+    "expo-router": "~3.5.18",
+    "expo-splash-screen": "~0.27.5",
+    "expo-status-bar": "~1.12.1",
+    "expo-system-ui": "~3.0.7",
+    "expo-web-browser": "~13.0.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-native": "0.74.3",
+    "react-native-gesture-handler": "~2.16.1",
+    "react-native-reanimated": "~3.10.1",
+    "react-native-safe-area-context": "4.10.5",
+    "react-native-screens": "3.31.1",
+    "react-native-web": "~0.19.10"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "@types/jest": "^29.5.12",
+    "@types/react": "~18.2.45",
+    "@types/react-test-renderer": "^18.0.7",
+    "jest": "^29.2.1",
+    "jest-expo": "~51.0.3",
+    "react-test-renderer": "18.2.0",
+    "typescript": "~5.3.3"
+  },
+  "private": true
+}
+
+
+
+
+
+
