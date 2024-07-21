@@ -1,0 +1,54 @@
+{
+  "expo": {
+    "name": "A403",
+    "slug": "a403",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "android": {
+      "package": "com.example.ddalkack",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "data": {
+            "scheme": "A403"
+          },
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ]
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "scheme": "A403",
+    "plugins": [
+      [
+        "@react-native-seoul/naver-login",
+        {
+          "kConsumerKey": "839C3Xl5rNF_HFuT6zf7",
+          "kConsumerSecret": "j4ubhdXZY7",
+          "kServiceAppName": "A403",
+          "kServiceAppUrlScheme": "A403"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "8b460710-cbac-4046-963b-476ab969c15d"
+      }
+    },
+    "owner": "swybean"
+  }
+}

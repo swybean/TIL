@@ -1,8 +1,12 @@
 expo로 리액트 네이티브-안드로이드 에뮬 프로젝트 하는법
 
 ### 1. 생성하는 법
-- 바탕화면 깃배시에서 실행
+- 바탕화면 깃배시에서 실행 (타입스크립트로 생성하는 법)
  npx create-expo-app 앱이름
+
+-
+npx create-expo-app MyNewProject --template expo-template-blank
+자바스크립트로 프로젝트 생성
 
 ### 2. 프로젝트 파일로 이동 및 VScode로 열기
 cd 앱이름
@@ -18,9 +22,9 @@ npm run android
 
 - package.json에서 "main": "index.js"로 수정하기
 
+'exp://192.168.45.139:8081'
 
-
-
+exp://192.168.45.139:8081
 
 
 ## App.js 예시 코드
