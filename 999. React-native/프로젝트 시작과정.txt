@@ -5,7 +5,7 @@ expo로 리액트 네이티브-안드로이드 에뮬 프로젝트 하는법
  npx create-expo-app 앱이름
 
 -
-npx create-expo-app MyNewProject --template expo-template-blank
+npx create-expo-app MyNewProject --template expo-template-blank@50
 자바스크립트로 프로젝트 생성
 
 ### 2. 프로젝트 파일로 이동 및 VScode로 열기
