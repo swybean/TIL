@@ -280,4 +280,31 @@ create(undefined); // 오류
 
 ---
 
-**타입 단언 (Type assertions)**
+**타입 단언 (Type assertions)**  
+다른 언어의 타입 변환(형 변환)과 유사하지만, 검사 혹은 데이터 재구성을 하지 않음  
+-> 런타임에 영향을 주지 않고, 컴파일러만 이를 사용함  
+-> 타입스크립트는 개발자가 필요한 특정 검사를 수행했다고 인지
+
+angle-bracket 문법
+
+```typescript
+let someValue: any = "this is a string";
+
+let strLength: number = (<string>someValue).length;
+```
+
+as - 문법
+
+```typescript
+let someValue: any = "this is a string";
+
+let strLength: number = (someValue as string).length;
+```
+
+위 2가지 방법은 동일하지만, JSX와 타입스크립트를 함께 사용할 때는 as - 스타일의 단언만 허용
+
+---
+
+**let**
+
+---
